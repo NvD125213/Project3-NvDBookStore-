@@ -1,0 +1,64 @@
+.section_blogs {padding: 30px 0;}
+.section_blogs .title-blog {margin-bottom: 28px; border-top: solid 2px green;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;}
+.section_blogs .title-blog .title-module {
+    font-size: 28px;
+    color: green;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.section_blogs .title-blog .link-more {
+    font-size: 15px;
+    color: green;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+}
+.section_blogs .title-blog .link-more i {width: 23px; height: 23px;
+    margin-left: 10px;}
+    .author_Features .swiper-container .item {
+    height: 186px;
+    position: relative;
+}
+.section_blogs .slide-blog-wrap {width: 1296px; height: auto; position: relative;}
+.section_blogs .slide-blog-wrap .slick-slide {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.section_blogs .slide-blog-wrap .slick-prev::before, .slick-next::before { font-size: 35px;
+    color: #1a1414;}
+.section_blogs .slide-blog-wrap .slick-prev, .slick-next   {
+    top: 50%;
+}
+.section_blogs .slide-blog-wrap .slick-prev {
+    left: -40px;
+}
+
+.section_blogs .slide-blog-wrap .content-blog h3 {
+    margin-bottom: 8px;
+    font-weight: 600;
+    max-height: 70px;
+    height: unset;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+.section_blogs .slide-blog-wrap .content-blog p {
+    height: 68px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #3F3F40;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 24px;
+}
+.section_blogs .slide-blog-wrap .content-blog span {display: inline-block;
+    font-size: 14px;
+    color: #7B7B7D;}

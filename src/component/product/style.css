@@ -1,0 +1,21 @@
+.productThumb {width: 100%; height: 350px; background: #fff; border-radius: 5px; position: relative; transition: all 0.3s ease-in-out; }
+
+.productThumb .info {padding: 0 15px;}
+.productThumb .title {color: #000; font-weight: 600; font-size: 15px; overflow: hidden;
+    text-overflow: ellipsis; width: 200px; white-space: nowrap;}
+.productThumb .info .price {margin-right: 15px; font-weight: 500; color: red;}
+.productThumb .info .discount {padding: 2px; background-color: red; color: #fff; border-radius:5px;}
+.productThumb .info .oldPrice {text-decoration: line-through; font-weight: 400; color: #000;}
+.productThumb:hover {box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)}
+
+.productThumb  .overlay {
+    position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(255,255,255,0.1); padding: 25px; display: flex; 
+    align-items: center; justify-content: center; opacity: 0; transform: scale(0.8); 
+}
+.productThumb .overlay ul {background: #fff; width: 73px; height: 40px; list-style: none; padding-left: 0 !important; border-radius: 10px;}
+.productThumb .overlay li {padding: 10px; border-right: 1px solid;}
+.productThumb .overlay li i {color: rgb(5, 190, 128);}
+.productThumb .overlay li a:hover i{color: #000;}
+.productThumb:hover .overlay {opacity: 1; transform: scale(1);}
+
+

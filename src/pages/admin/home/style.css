@@ -1,0 +1,23 @@
+.site_layout_background {
+    background: #fff ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ant-layout {
+    min-height: 100vh;
+}
+.ant-layout-header .avatar_admin {
+    margin-right: 30px;
+}
+.ant-layout-header .avatar_admin span {
+    margin-right: 20px;
+}
+.ant-layout-header .avatar_admin span {
+    margin-right: 0px;
+}
+.ant-layout-header .avatar_admin button {
+    margin-left: 20px;
+}
+.ant-layout-header .avatar_admin .name {margin-left: 10px;}

@@ -1,0 +1,37 @@
+ul {list-style: none;}
+a {text-decoration: none;}
+.breadcrumb {
+    width: 100%; height: auto; padding: 45px 75px; background: #d8f1e5; border-radius: 20px;
+}
+.breadcrumb h1 {color: #000; opacity: 0.8; font-size: 30px; font-weight: bold; }
+.breadcrumb ul { padding-left: 0;}
+.breadcrumb ul li {margin-right: 15px;}
+.breadcrumb ul li a {color: #000; font-size: 18px;}
+
+.sidebarWrapper h4 {font-size: 25px; font-weight: 600; position: relative; padding-bottom: 20px; margin-bottom: 15px;}
+.sidebarWrapper h4::after {content: ''; width: 100%; height: 3px; background: #f0f0f0; position: absolute; bottom: 0; left: 0;}
+.sidebarWrapper h4::before {content: ''; width: 20%; height: 3px; background: #b0e5c2; position: absolute; bottom: 0; left: 0 ; z-index: 10;}
+.sidebarWrapper .sidebar .card {padding: 25px; margin-bottom: 40px;}
+.sidebarWrapper .sidebar .card .catList .catItem {padding: 10px; border: 1px solid rgba(0,0,0,0.05); cursor: pointer; margin: 10px 0; border-radius: 4px;}
+.sidebarWrapper .sidebar .card .catList .catItem h5 {font-size: 1rem;}
+.sidebarWrapper .sidebar .card .catList .catItem .rounded-circle {background: #bce3c9; height: 40px; width: 40px;}
+.sidebarWrapper .sidebar .card .catList .catItem:hover {border: 1px solid rgba(0,0,0,0.1);}
+
+.filters {padding: 0;margin-left: -10px; overflow-y: scroll; max-height: 250px;}
+.filters::-webkit-scrollbar{width: 10px !important;}
+.filters::-webkit-scrollbar-thumb{background: #ccc !important;}
+.filters li {width: 100%; margin-bottom: 10px;}
+.sidebarWrapper .sidebar .btn-g {background: #3bb77e; padding: 10px 25px; border-radius: 5px; color: #fff;text-transform: capitalize !important;}
+.sidebarWrapper .sidebar .btn {
+    width: 150px;
+    margin-top: 20px;
+}
+.rightContent {max-width: 80%; width: 75% !important;}
+.rightContent .productRow .item {width: 25% !important;}
+.rightContent .topStrip {padding: 0 50px;}
+.rightContent .topStrip p {font-size: 16px;}
+.rightContent .topStrip .tab_ button {
+    color: #000;
+    margin-left: 20px;
+    background: none !important; border: 1px solid rgba(0,0,0,0.1) !important; padding: 7px 20px ; text-transform: capitalize !important;
+}

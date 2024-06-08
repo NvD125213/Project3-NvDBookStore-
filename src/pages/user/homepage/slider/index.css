@@ -1,0 +1,23 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
+.homeSlider {padding: 30px 0; width: 1400px; position: relative; }
+.home_slider_Main .item {height: 500px; position: relative;}
+.home_slider_Main .slick-prev, .home_slider_Main .slick-next { z-index: 100; }
+.home_slider_Main .slick-next {right: 3%; }
+.home_slider_Main .slick-prev {left: 2.5%;}
+
+.home_slider_Main .slick-prev::before { font-size: 35px; color: #fff;}
+.home_slider_Main .slick-next::before {font-size: 35px; color: #fff;}
+.home_slider_Main .item .info {position: absolute; top: 20%; left: 10%; z-index: 100; width: 50%;}
+.home_slider_Main .item .info h2 {font-size: 50px !important; font-weight: bolder; color: rgba(0, 0, 0, 0.8); font-style: italic;}
+.home_slider_Main .item .info p {color: #fff; font-size: 20px}
+.homeSlider .newBetterBanner {position: absolute; width: 535px; height: 60px; bottom: 120px; left: 9%; z-index: 100;}
+.homeSlider .newBetterBanner input {width: 90%; height: 90%; background: #fff; border-radius: 30px; outline: none !important; padding-left: 40px; border: 0;
+padding-right: 130px;}
+.homeSlider .newBetterBanner button {padding: 10px 30px !important; border-radius: 40px !important; color: #fff; position: absolute; top: 0; right: 0; 
+font-size: 20px; height: 54px; text-transform: capitalize !important;}
+.homeSlider .newBetterBanner i {left: 15px;
+    position: absolute;
+    bottom: 33%;}
+

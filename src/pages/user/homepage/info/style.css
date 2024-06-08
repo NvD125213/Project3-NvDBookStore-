@@ -1,0 +1,38 @@
+.section_info {
+    padding: 80px 0 50px;
+}
+.section_info .info-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: solid 2px green;
+
+}
+.section_info h2 {
+    color: green;
+    font-size: 28px;
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.section_info span {
+    color: green;
+    font-size: 16px;
+    line-height: 26px;
+    display: block;
+    font-style: italic;
+}
+.section_info .short-content {
+    padding-top: 19px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #151515;
+    padding-right: 137px;
+    margin-bottom: 41px;
+}
+.section_info button {
+    color: #fff;
+    background-color: #2c069e;
+    margin-bottom: 10px;
+    border-bottom: solid 2px green;
+}

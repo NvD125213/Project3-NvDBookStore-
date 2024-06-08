@@ -1,0 +1,49 @@
+.author_Features {padding: 30px 0;}
+.author_Features .title-border {margin-bottom: 28px; border-top: solid 2px green;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;}
+.author_Features .title-border .title-module {
+    font-size: 28px;
+    color: green;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.author_Features .title-border .link-more {
+    font-size: 15px;
+    color: green;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+}
+.author_Features .swiper-container {margin-left: auto;margin-right: auto;position: relative;overflow: 
+    hidden;list-style: none;padding: 0;z-index: 1;}
+.author_Features .title-border .link-more i {width: 23px; height: 23px;
+    margin-left: 10px;}
+   
+.author_Features .slider_author_Main {width: 1296px; height: auto; position: relative;}
+.author_Features .slider_author_Main .slick-slide {
+    padding-right: 40px !important;
+    padding-left: 30px !important;
+}
+.author_Features .slider_author_Main .item-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+
+}
+.author_Features .slider_author_Main .item-author h3 {font-size: 20px; margin-top: 20px;}
+.author_Features .slider_author_Main .item-author img {border-radius: 50%; height:  180px;}
+.author_Features .slider_author_Main .slick-prev::before, .slick-next::before { font-size: 35px;
+    color: #1a1414;}
+.author_Features .slider_author_Main .slick-prev, .slick-next   {
+    top: 50%;
+}
+.author_Features .slider_author_Main .slick-prev {
+    left: -40px;
+}

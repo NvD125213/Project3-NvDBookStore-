@@ -1,0 +1,73 @@
+.detailPage {
+    margin: 0 30px;
+}
+.productZoom {
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.detailPage .home_slider_Main .slick-next::before {
+    font-size: 35px;
+    color: #0b0b0b;
+}
+
+.detailPage .home_slider_Main .slick-prev::before {
+    font-size: 35px;
+    color: #0b0b0b;
+}
+.detailPage .home_slider_Main .slick-next {
+    top: 50%;
+    right: 5%;
+}
+.detailPage .home_slider_Main .slick-prev {
+    top: 50%;
+    left: 1.5%;
+}
+.detailPage .productInfo .BoxButtons .counter-qty {
+    font-size: 16px;
+    color: #777777;
+}
+
+.detailPage .productInfo .BoxButtons .btn-mua {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.detailPage .productInfo .BoxButtons .btn-mua button {
+    color: #228b22;
+    height: 65px;
+    background: #fff;
+    width: 224px;
+    border-radius: 5px;
+    display: inline;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 0;
+    position: relative;
+    border: solid 1px #228b22;
+    box-shadow: none;
+    outline: none;
+    margin-right: 10px;
+}
+.detailPage .productInfo .BoxButtons .btn-mua button.btn-buy-now {
+    margin-right: 0;
+    background: #228b22;
+    border-color: #228b22;
+    color: #fff;
+    text-align: center !important;
+    display: block;
+}
+.detailPage .productInfo .productTag {
+    margin-bottom: 15px;
+}
+.detailPage .productInfo .productTag ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.detailPage .productInfo .productTag ul li {
+    margin-right: 10px;
+}

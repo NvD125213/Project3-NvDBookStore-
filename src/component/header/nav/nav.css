@@ -1,0 +1,33 @@
+.nav {height: 80px; width: 100%; margin: 0 auto; border-top: 1px solid rgba(0,0,0,0.1); border-bottom:1px solid rgba(0,0,0,0.1) ;} 
+.nav i {padding: 5px;}
+.nav i:first-child {margin-right: 5px;}
+
+.nav .list li button {text-transform: capitalize !important; font-size: 16px !important; padding: 21px 10px !important;  color: rgba(0,0,0,0.8) !important;}
+
+.nav ul li button a {text-decoration: none !important; color: rgba(0,0,0,0.7) !important;}
+.nav .phNo {margin-left: 15px;}
+.nav .phNo i {font-size: 40px;}
+.des-phNo h4 {margin-bottom: 0; line-height: 30px !important;}
+.des-phNo p {margin-top: 0; font-size: 12px; font-weight: 700; margin-bottom: 0rem;}
+.nav .dropdown-menu-review {
+    padding-left:0 ;
+    list-style: none; 
+    top: 100%; left: 0; width: 250px; height: auto; background: #fff; z-index: 100; box-shadow: 0 3px 6px rgb(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+
+}
+.nav .dropdown-menu-review li {width: 100%;     border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+.nav .dropdown-menu-review li button {width: 100%; padding: 10px 5px 10px 1px !important;}
+.nav .mega-menu {
+    width: 1200px; 
+    margin-top: 5px;
+    position: absolute; /* Sử dụng absolute để định vị menu */
+    left: 10%;
+    top: 100%;
+    height: auto !important;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Đảm bảo menu hiển thị trên các phần tử khác */
+    padding: 10px; 
+}
+.nav .mega-menu ul {list-style: none; padding-left: 0;}

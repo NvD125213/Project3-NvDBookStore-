@@ -1,0 +1,23 @@
+.catParent {width: 1410px; height: auto; padding: 30px 0; position: relative;}
+.catParent .hd {font-size: 30px; font-weight: 700; margin: 15px;}
+.catParent .hd i {margin-right: 10px;}
+.cat_Parent_Main .slick-slide {padding-right: 10px !important; padding-left: 10px !important; border-radius: 10px;}
+.cat_Parent_Main .item {height: auto !important; background: #F4F6FA; display: flex !important; align-items: center; justify-content: center; 
+border: 1px solid; border-radius: 10px;}
+.cat_Parent_Main .item .info {height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;  }
+.cat_Parent_Main .item .info img {width: 100%; border-radius: 10px 10px 0px 25px;}
+
+.cat_Parent_Main .slick-prev, .cat_Parent_Main .slick-next { z-index: 100; }
+.cat_Parent_Main .slick-prev::before { font-size: 35px; color: #281c1c;}
+.cat_Parent_Main .slick-next::before {font-size: 35px; color: #1a1414;}
+.cat_Parent_Main .item .info p {font-size: 14px; opacity: 0.8; color: black; margin-bottom: 0px;}
+.cat_Parent_Main .slick-prev {
+    top: -30px !important; right: 80px !important; left: inherit !important; 
+}
+.cat_Parent_Main .slick-next {
+    top: -30px !important; right: 45px !important; left: inherit !important; 
+}
+.cat_Parent_Main .item:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); top: -5px;
+}
+ 

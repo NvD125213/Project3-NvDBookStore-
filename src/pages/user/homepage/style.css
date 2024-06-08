@@ -1,0 +1,10 @@
+.homeProduct {width: 1410px; height: auto; position: relative;  padding: 15px;}
+.homeProduct .homeProductTitle {background-color: #1de99d99; border-radius: 10px; padding: 10px; }
+.homeProduct .hd {font-size: 30px; font-weight: 700; margin: 15px;}
+.homeProduct .hd i {margin-right: 10px;}
+.homeProduct .filterTab .itemTab a {color: #000; text-decoration: none; font-size: 15px; transition: all 0.3 ease-in-out; position: relative;}
+.homeProduct .filterTab .itemTab a:hover {color: #fffffff0; transform: translateY(-10px);}
+.homeProduct .productRow {padding: 20px;}
+.homeProduct .productRow .item {
+     width: 20%; padding: 15px; 
+} 

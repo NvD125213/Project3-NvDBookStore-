@@ -1,0 +1,5 @@
+.dropdown-menu-account {z-index: 1000; padding: 5px 5px !important; position: absolute; top: 100%; width:310px; border-radius: 10px;
+height: auto;right: 0; background: #fff; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);}
+
+.dropdown-menu-account li button {width: 100% !important; justify-content: flex-start !important; text-transform: capitalize !important; color: black !important;}
+.dropdown-menu-account li button i {margin-right: 7px;}
