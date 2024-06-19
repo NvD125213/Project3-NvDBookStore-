@@ -1,59 +1,119 @@
-import React from "react";
-import { Checkbox } from "@mui/material";
-import { Button } from "@mui/material";
+import React, { useState } from "react";
+import { Radio, RadioGroup, FormControlLabel } from "@mui/material";
 
-const label = {inputProps: {'aria-label':'Checkbox demo'}}
-const Sidebar = () => {
-    return(
+const Sidebar = ({ onPriceRangeChange }) => {
+    const [selectedRange, setSelectedRange] = useState(""); 
+
+    const handleRadioChange = (event) => {
+        const newValue = event.target.value;
+        setSelectedRange(newValue); 
+        onPriceRangeChange(newValue); 
+    };
+    <RadioGroup >
+    <FormControlLabel
+        value="1"
+        control={<Radio />}
+        label="Comedy"
+    />
+    <FormControlLabel
+        value="3"
+        control={<Radio />}
+        label="Hành động"
+    />
+    <FormControlLabel
+        value="4"
+        control={<Radio />}
+        label="Phiêu lưu"
+    />
+    <FormControlLabel
+        value="5"
+        control={<Radio />}
+        label="Romance"
+    />
+</RadioGroup>
+
+    return (
         <div className="sidebar">
             <div className="card border-0 shadow">
-                <h4>DANH MỤC LỚN</h4>
-                <div className="catList">
-                    <div className="catItem d-flex align-items-center justify-content-between">
-                        <h5 className="mb-0 ml-3 mr-3">Hư cấu</h5>
-                        <span className="d-flex align-items-center rounded-circle ml-auto justify-content-center ">30</span>
-                    </div>
-                    <div className="catItem d-flex align-items-center justify-content-between">
-                        <h5 className="mb-0 ml-3 mr-3">Phi hư cấu</h5>
-                        <span className="d-flex align-items-center rounded-circle ml-auto justify-content-center ">90</span>
-                    </div>
-                    <div className="catItem d-flex align-items-center justify-content-between">
-                        <h5 className="mb-0 ml-3 mr-3">Thiếu nhi</h5>
-                        <span className="d-flex align-items-center rounded-circle ml-auto justify-content-center ">70</span>
-                    </div>
-                    <div className="catItem d-flex align-items-center justify-content-between">
-                        <h5 className="mb-0 ml-3 mr-3">Phân loại khác</h5>
-                        <span className="d-flex align-items-center rounded-circle ml-auto justify-content-center ">110</span>
-                    </div>
-                   
-
-                </div>
-            </div>
-
-            <div className="card border-0 shadow">
                 <h4>MỨC GIÁ</h4>
-                <ul className="filters">
-                    <li><Checkbox {...label} />0 - 100.000đ</li>
-                    <li><Checkbox {...label} />100.000đ - 300.000đ</li>
-                    <li><Checkbox {...label} />300.000đ - 500.000đ</li>
-                    <li><Checkbox {...label} />Trên 500.000đ</li>
-                </ul>
-                <h3>Tags</h3>
-                <ul className="filters">
-                    <li><Checkbox {...label} />Comedy</li>
-                    <li><Checkbox {...label} />Shonen</li>
-                    <li><Checkbox {...label} />Drama</li>
-                    <li><Checkbox {...label} />Actions</li>
-                    <li><Checkbox {...label} />Fantasy</li>
-                    <li><Checkbox {...label} />Sci Fi</li>
-                </ul>
-
-                <div className="d-flex">
-                    <Button className="btn btn-g"> 
-                    Tìm kiếm</Button>
-                </div>
+                <RadioGroup value={selectedRange} onChange={handleRadioChange}>
+                    <FormControlLabel
+                        value="2"
+                        control={<Radio />}
+                        label="0 - 100.000đ"
+                    />
+                    <FormControlLabel
+                        value="3"
+                        control={<Radio />}
+                        label="100.000đ - 300.000đ"
+                    />
+                    <FormControlLabel
+                        value="4"
+                        control={<Radio />}
+                        label="300.000đ - 500.000đ"
+                    />
+                    <FormControlLabel
+                        value="5"
+                        control={<Radio />}
+                        label="Trên 500.000đ"
+                    />
+                </RadioGroup>
+              
             </div>
+            <div className="card border-0 shadow">
+                <h4>Tag</h4>
+                <RadioGroup >
+                    <FormControlLabel
+                        value="1"
+                        control={<Radio />}
+                        label="Comedy"
+                    />
+                    <FormControlLabel
+                        value="3"
+                        control={<Radio />}
+                        label="Hành động"
+                    />
+                    <FormControlLabel
+                        value="4"
+                        control={<Radio />}
+                        label="Phiêu lưu"
+                    />
+                    <FormControlLabel
+                        value="5"
+                        control={<Radio />}
+                        label="Romance"
+                    />
+                     <FormControlLabel
+                        value="6"
+                        control={<Radio />}
+                        label="Hachi"
+                    />
+                     <FormControlLabel
+                        value="7"
+                        control={<Radio />}
+                        label="Kinh dị"
+                    />
+                     <FormControlLabel
+                        value="8"
+                        control={<Radio />}
+                        label="Novel"
+                    />
+                      <FormControlLabel
+                        value="9"
+                        control={<Radio />}
+                        label="Kinh dị Hàn"
+                    />
+                     <FormControlLabel
+                        value="8"
+                        control={<Radio />}
+                        label="Noben Novel"
+                    />
+                </RadioGroup>
+            </div>
+
+            
         </div>
-    )
-}
-export default Sidebar
+    );
+};
+
+export default Sidebar;

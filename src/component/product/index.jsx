@@ -1,34 +1,31 @@
 import React from "react";
-import './style.css'
+import './style.css';
 import { Link } from "react-router-dom";
-import sach1 from '../../assets/user/image/product/sach1.jpg';
-
-
-const Product = () => {
+import { addToCart } from "../../store/cart.atom";
+import { formatCurrency } from "../../action/formatPriceAction";
+const Product = ({ product }) => {
+    
     return (
         <div className="productThumb">
-            <Link>
+            <Link to={`/product/${product.id}`}>
                 <div className="imgWrapper">
-                    <img src={sach1} className="w-100" alt="" />
-                </div>
-                <div className="overlay">
-                    <ul className="d-flex justify-content-between">
-                        <li className=""><a href="/cart"><i className="bi bi-bag-check"></i></a></li>
-                        <li className=""><a href="/detail"><i className="bi bi-eye"></i></a></li>
-                    </ul>
+                    <img src={`http://localhost:8100/${product.image}`} className="w-100" alt={product.name} height={260} />
                 </div>
             </Link>
          
             <div className="info">
-                <h4 className="title">“Chém" Tiếng Anh Không Cần Động Não - Tặng Kèm Bộ Video Luyện Nghe-Nói + Sổ Học Từ Vựng</h4>
+                <h4 className="title">{product.name}</h4>
                 <div className="d-flex align-items-center">
-                    <span className="price">78.400đ</span>
-                    <span className="discount">-50%</span>
+                    <span className="price">{formatCurrency(product.price - (product.price * product.discount / 100))}</span>
+                    <span className="discount">{product.discount}%</span>
+                    <button type="button" style={{marginLeft: '10px'}} onClick={() => addToCart(product.id, 1)} class="btn btn-success">Giỏ hàng</button>
+
                 </div>
-                <div className="oldPrice">80.000đ</div>
+                <div className="oldPrice">{formatCurrency(product.price)}</div>
             </div>
             
         </div>
-    )
+    );
 }
-export default Product
+
+export default Product;

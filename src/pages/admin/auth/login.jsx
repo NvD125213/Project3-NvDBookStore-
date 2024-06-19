@@ -1,4 +1,5 @@
 import React from "react";
+import anh from "../../../assets/user/image/logo/logodaidien.webp"
 import { useLoginActions } from "../../../action/authAction";
 import Loading from "../../../component/loading";
 const Login = () => {
@@ -12,7 +13,9 @@ const Login = () => {
                     <div className="card o-hidden border-0 shadow-lg my-5">
                         <div className="card-body p-0">
                             <div className="row">
-                                <div className="col-lg-6 d-none d-lg-block bg-login-image" />
+                                <div className="col-lg-6 d-none d-lg-block bg-login-image" >
+                                    <img src={anh} alt="" className="w-100"/>
+                                </div>
                                 <div className="col-lg-6">
                                     <div className="p-5">
                                         <div className="text-center">
@@ -20,21 +23,40 @@ const Login = () => {
                                         </div>
                                         <form className="user" onSubmit={loginSubmit}>
                                             <div className="form-group">
-                                                <input type="email" name="email" onChange={handleInput} className="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nhập Email vào đây..." />
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    onChange={handleInput}
+                                                    className="form-control form-control-user"
+                                                    id="exampleInputEmail"
+                                                    aria-describedby="emailHelp"
+                                                    placeholder="Enter your email..."
+                                                />
                                                 <span className="text-danger">{loginInput.error_list.email}</span>
                                             </div>
                                             <div className="form-group">
-                                                <input type="password" name="password" onChange={handleInput} className="form-control form-control-user" id="exampleInputPassword" placeholder="Nhập mật khẩu" />
+                                                <input
+                                                    type="password"
+                                                    name="password"
+                                                    onChange={handleInput}
+                                                    className="form-control form-control-user"
+                                                    id="exampleInputPassword"
+                                                    placeholder="Enter your password..."
+                                                />
                                                 <span className="text-danger">{loginInput.error_list.password}</span>
                                             </div>
                                             <div className="form-group">
                                                 <div className="custom-control custom-checkbox small">
-                                                    <input type="checkbox" className="custom-control-input" id="customCheck" />
+                                                    <input
+                                                        type="checkbox"
+                                                        className="custom-control-input"
+                                                        id="customCheck"
+                                                    />
                                                     <label className="custom-control-label" htmlFor="customCheck">Remember Me</label>
                                                 </div>
                                             </div>
                                             <button type="submit" className="btn btn-primary btn-user btn-block">
-                                                Đăng nhập
+                                                Login
                                             </button>
                                             <hr />
                                             <a href="index.html" className="btn btn-google btn-user btn-block">

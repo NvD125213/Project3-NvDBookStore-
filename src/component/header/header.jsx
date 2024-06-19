@@ -7,6 +7,7 @@ import Select from './select-drop/select';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Menu from '../header/menu/menu';
 import Nav from './nav/nav';
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
     const [categories] = useState([
         'Danh mục',
@@ -15,7 +16,18 @@ const Header = () => {
         'Tiểu thuyết',
         'Truyện tranh'
     ]);
-
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate()
+    const handleSearch = () => {
+        if (searchQuery.trim() !== '') {
+          navigate(`/search/${encodeURIComponent(searchQuery)}`);
+        }
+    };
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
     return (
         <header>
             <div className='container'>
@@ -27,8 +39,14 @@ const Header = () => {
                         <div className="header-search d-flex align-items-center">
                             <Select data={categories} />
                             <div className="search">
-                                <input type="text" placeholder='Nhập từ khóa tìm kiếm...' />
-                                <img src={Search} alt="Search Icon" />
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                onKeyPress={handleKeyPress}
+                            />
+                            <button onClick={handleSearch}><img src={Search} alt="Search Icon" /></button>
                             </div>
                         </div>
                     </div>

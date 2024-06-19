@@ -4,9 +4,11 @@ import daidien from '../../../assets/user/image/logo/logodaidien-removebg-previe
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  SlidersOutlined,
   UserOutlined,
   ProfileOutlined,
   LogoutOutlined,
+  BookFilled, OrderedListOutlined, BarChartOutlined
 } from '@ant-design/icons';
 import { Avatar, Button, Layout, Menu, theme } from 'antd';
 import Loading from '../../../component/loading';
@@ -57,9 +59,29 @@ const Admin = () => {
               label: 'Profile',
             },
             {
+              key: '/admin/slider',
+              icon: <SlidersOutlined />,
+              label: 'Slider',
+            },
+            {
               key: '/admin/category',
               icon: <MenuFoldOutlined />,
               label: 'Danh mục',
+            },
+            {
+              key: '/admin/product',
+              icon: <BookFilled />,
+              label: 'Sản phẩm',
+            },
+            {
+              key: '/admin/order',
+              icon: <OrderedListOutlined />,
+              label: 'Đơn hàng',
+            },
+            {
+              key: '/admin/statistic',
+              icon: <BarChartOutlined />,
+              label: 'Thống kê',
             },
            
           ]}
@@ -98,6 +120,7 @@ const Admin = () => {
           }}
         >
           <Outlet />
+          
         </Content>
       </Layout>
     </Layout>

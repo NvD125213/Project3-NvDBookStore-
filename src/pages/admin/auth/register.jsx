@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import anh from "../../../assets/user/image/logo/logodaidien.webp"
+
 import Loading from "../../../component/loading";
 const Register = () => {
     const navigate = useNavigate();
@@ -52,7 +54,10 @@ const Register = () => {
             <div className="card o-hidden border-0 shadow-lg my-5">
                 <div className="card-body p-0">
                     <div className="row">
-                        <div className="col-lg-5 d-none d-lg-block bg-register-image" />
+                        <div className="col-lg-5 d-none d-lg-block bg-register-image">
+                        <img src={anh} alt="" className="w-100"/>
+
+                        </div>
                         <div className="col-lg-7">
                             <div className="p-5">
                                 <div className="text-center">

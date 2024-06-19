@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 import Slider from "react-slick";
 import '../slider/index.css'
-import pic1 from '../../../../assets/user/image/slider/01.jpg'
-import pic2 from '../../../../assets/user/image/slider/02.jpg'
-import pic3 from '../../../../assets/user/image/slider/03.jpg'
+
 import { Button } from "@mui/material";
 
 
 const HomeSlider = () => {
+  const [sliders, setSliders] = useState([]);
+
+  useEffect(() => {
+    const fetchSliders = async () => {
+      try {
+        const response = await axios.get(`/api/slider/getSlider`);
+        setSliders(response.data.sliders);
+      } catch (error) {
+        console.error('Error fetching sliders:', error);
+      }
+    };
+    fetchSliders();
+  }, []);
   var settings = {
     dots: true,
     infinite: true,
@@ -16,36 +28,19 @@ const HomeSlider = () => {
     fade: true,
     arrows: true,
     slidesToScroll: 1,
+    autoplay: true,  
+    autoplaySpeed: 5000 
   };
     return (
         <section className="homeSlider mx-auto">
             <div className="container-fluid">
-                <Slider {...settings} className="home_slider_Main">
-                    <div className="item">
-                      <img src={pic1} alt="" className="w-100" />
-                      <div className="info">
-                        <h2 className="mb-4">Đừng bỏ lỡ bất cứ voucher nào!</h2>
-                        <p className="mb-65">Giảm giá 50% cho đơn hàng đầu tiên</p>
-
-                      </div>
-                    </div>
-                    <div className="item">
-                      <img src={pic2} alt="" className="w-100" />
-                      <div className="info">
-                        <h2 className="mb-4">Đừng bỏ lỡ bất cứ voucher nào!</h2>
-                        <p className="mb-65">Giảm giá 50% cho đơn hàng đầu tiên</p>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <img src={pic3} alt="" className="w-100" />
-                      <div className="info">
-                        <h2 className="mb-4">Đừng bỏ lỡ bất cứ voucher nào!</h2>
-                        <p className="mb-65">Giảm giá 50% cho đơn hàng đầu tiên</p>
-
-                      </div>
-                    </div>
-                   
-                </Slider>
+            <Slider {...settings} className="home_slider_Main">
+              {sliders.map((slider, index) => (
+              <div key={index} className="item">
+                <img src={`http://localhost:8100/${slider.image}`} alt={`Slide ${index}`} className="w-100" />
+              </div>
+              ))}
+            </Slider>
                 <div className="newBetterBanner">
                   <i className="bi bi-send"></i>
                   <input type="text" placeholder="Nhập Email của bạn..."/>

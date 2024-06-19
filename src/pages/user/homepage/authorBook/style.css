@@ -26,8 +26,8 @@
    
 .author_Features .slider_author_Main {width: 1296px; height: auto; position: relative;}
 .author_Features .slider_author_Main .slick-slide {
-    padding-right: 40px !important;
-    padding-left: 30px !important;
+    padding-right: 62px !important;
+    padding-left: 45px !important;
 }
 .author_Features .slider_author_Main .item-author {
     display: flex;
@@ -38,7 +38,8 @@
 
 }
 .author_Features .slider_author_Main .item-author h3 {font-size: 20px; margin-top: 20px;}
-.author_Features .slider_author_Main .item-author img {border-radius: 50%; height:  180px;}
+.author_Features .slider_author_Main .item-author img {border-radius: 50%;
+    height: 150px;}
 .author_Features .slider_author_Main .slick-prev::before, .slick-next::before { font-size: 35px;
     color: #1a1414;}
 .author_Features .slider_author_Main .slick-prev, .slick-next   {

@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
 import { loginState } from '../store/auth.atom';
 import { loadingState } from '../store/loading.atom';
-// Custom hook để xử lý logic login
 
 export const useLoginActions = () => {
     const [loading, setLoading] = useRecoilState(loadingState);
@@ -18,7 +18,7 @@ export const useLoginActions = () => {
 
     const loginSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Bắt đầu hiển thị spinner
+        setLoading(true); 
         const data = {
             email: loginInput.email,
             password: loginInput.password
@@ -34,8 +34,11 @@ export const useLoginActions = () => {
             if (res.data.status === 200) {
                 localStorage.setItem('auth_token', res.data.token);
                 localStorage.setItem('auth_name', res.data.name);
+                localStorage.setItem('auth_role', res.data.role);
+
                 swal("Success", res.data.message, "success");
-                navigate('/admin');
+                navigate('/');
+           
             } else {
                 setLogin({ ...loginInput, error_list: res.data.validation_errors });
             }
@@ -56,16 +59,23 @@ export const useLoginActions = () => {
 export const useLogoutActions = () => {
     const [loading, setLoading] = useRecoilState(loadingState);
     const navigate = useNavigate();
+   
+    useEffect(() => {
+        const interceptor = axios.interceptors.request.use(
+            function(config) {
+                const token = localStorage.getItem('auth_token');
+                config.headers.Authorization = token ? `Bearer ${token}` : '';
+                return config;
+            },
+            function(error) {
+                return Promise.reject(error);
+            }
+        );
 
-    axios.interceptors.request.use(function(config) {
-        const token = localStorage.getItem('auth_token');
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-        }
-        return config;
-    }, function(error) {
-        return Promise.reject(error);
-    });
+        return () => {
+            axios.interceptors.request.eject(interceptor);
+        };
+    }, []);
 
     const logoutSubmit = async (e) => {
         e.preventDefault();
@@ -76,8 +86,14 @@ export const useLogoutActions = () => {
             if (res.status === 200) {
                 localStorage.removeItem('auth_token');
                 localStorage.removeItem('auth_name');
-                swal("Thành công", res.data.message, "success");
-                navigate('/login');
+                localStorage.removeItem('auth_role');
+
+                if( res.role === 1) {
+                    navigate('/login');
+                } 
+                else {
+                    navigate('/')
+                }
             }
         } catch (error) {
             console.error("Đăng xuất thất bại:", error);

@@ -5,6 +5,11 @@ export const categories = atom({
     default: [],
   });
   
+export const categoryState = atom({
+  key: "categoryState",
+  default: [],
+});
+  
   export const filterCategoriesValue = atom({
     key: "filterCategoriesValue",
     default: "",
